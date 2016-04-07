@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5701A11F1CAD622900E0EDAD /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5701A11E1CAD622900E0EDAD /* MessageViewController.swift */; };
+		571846851CB55EB0004F3479 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571846841CB55EB0004F3479 /* Messages.swift */; };
 		57D3EC991CA528B50089B52E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3EC981CA528B50089B52E /* AppDelegate.swift */; };
-		57D3EC9B1CA528B50089B52E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3EC9A1CA528B50089B52E /* ViewController.swift */; };
 		57D3EC9E1CA528B50089B52E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D3EC9C1CA528B50089B52E /* Main.storyboard */; };
-		57D3ECA11CA528B50089B52E /* _325trymap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57D3EC9F1CA528B50089B52E /* _325trymap.xcdatamodeld */; };
 		57D3ECA31CA528B50089B52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D3ECA21CA528B50089B52E /* Assets.xcassets */; };
 		57D3ECA61CA528B50089B52E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D3ECA41CA528B50089B52E /* LaunchScreen.storyboard */; };
+		57D3ECAE1CA55AB20089B52E /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3ECAD1CA55AB20089B52E /* MyTableViewController.swift */; };
+		57D3ECB01CA55AFA0089B52E /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3ECAF1CA55AFA0089B52E /* ListTableViewCell.swift */; };
+		57D3ECB21CA55C3F0089B52E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3ECB11CA55C3F0089B52E /* MapViewController.swift */; };
+		57D3ECB41CA55C6F0089B52E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D3ECB31CA55C6F0089B52E /* MapKit.framework */; };
+		57D3ECBA1CA571940089B52E /* txtlist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57D3ECB81CA571940089B52E /* txtlist.xcdatamodeld */; };
+		57D3ECBC1CA575F20089B52E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3ECBB1CA575F20089B52E /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5701A11E1CAD622900E0EDAD /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		571846841CB55EB0004F3479 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		57D3EC951CA528B50089B52E /* 0325trymap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 0325trymap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D3EC981CA528B50089B52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57D3EC9A1CA528B50089B52E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		57D3EC9D1CA528B50089B52E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		57D3ECA01CA528B50089B52E /* _325trymap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _325trymap.xcdatamodel; sourceTree = "<group>"; };
 		57D3ECA21CA528B50089B52E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57D3ECA51CA528B50089B52E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57D3ECA71CA528B50089B52E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57D3ECAD1CA55AB20089B52E /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		57D3ECAF1CA55AFA0089B52E /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		57D3ECB11CA55C3F0089B52E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		57D3ECB31CA55C6F0089B52E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		57D3ECB91CA571940089B52E /* txtlist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = txtlist.xcdatamodel; sourceTree = "<group>"; };
+		57D3ECBB1CA575F20089B52E /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D3ECB41CA55C6F0089B52E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 		57D3EC8C1CA528B50089B52E = {
 			isa = PBXGroup;
 			children = (
+				571846841CB55EB0004F3479 /* Messages.swift */,
+				57D3ECB31CA55C6F0089B52E /* MapKit.framework */,
 				57D3EC971CA528B50089B52E /* 0325trymap */,
 				57D3EC961CA528B50089B52E /* Products */,
 			);
@@ -57,12 +72,16 @@
 			isa = PBXGroup;
 			children = (
 				57D3EC981CA528B50089B52E /* AppDelegate.swift */,
-				57D3EC9A1CA528B50089B52E /* ViewController.swift */,
 				57D3EC9C1CA528B50089B52E /* Main.storyboard */,
 				57D3ECA21CA528B50089B52E /* Assets.xcassets */,
 				57D3ECA41CA528B50089B52E /* LaunchScreen.storyboard */,
 				57D3ECA71CA528B50089B52E /* Info.plist */,
-				57D3EC9F1CA528B50089B52E /* _325trymap.xcdatamodeld */,
+				57D3ECAD1CA55AB20089B52E /* MyTableViewController.swift */,
+				57D3ECAF1CA55AFA0089B52E /* ListTableViewCell.swift */,
+				57D3ECB11CA55C3F0089B52E /* MapViewController.swift */,
+				57D3ECB81CA571940089B52E /* txtlist.xcdatamodeld */,
+				57D3ECBB1CA575F20089B52E /* Message.swift */,
+				5701A11E1CAD622900E0EDAD /* MessageViewController.swift */,
 			);
 			path = 0325trymap;
 			sourceTree = "<group>";
@@ -99,6 +118,12 @@
 				TargetAttributes = {
 					57D3EC941CA528B50089B52E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4QX528523R;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,9 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57D3ECA11CA528B50089B52E /* _325trymap.xcdatamodeld in Sources */,
-				57D3EC9B1CA528B50089B52E /* ViewController.swift in Sources */,
+				57D3ECB01CA55AFA0089B52E /* ListTableViewCell.swift in Sources */,
+				571846851CB55EB0004F3479 /* Messages.swift in Sources */,
+				57D3ECBA1CA571940089B52E /* txtlist.xcdatamodeld in Sources */,
+				57D3ECAE1CA55AB20089B52E /* MyTableViewController.swift in Sources */,
+				57D3ECB21CA55C3F0089B52E /* MapViewController.swift in Sources */,
 				57D3EC991CA528B50089B52E /* AppDelegate.swift in Sources */,
+				57D3ECBC1CA575F20089B52E /* Message.swift in Sources */,
+				5701A11F1CAD622900E0EDAD /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +283,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = 0325trymap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.cgua.-325trymap";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -264,10 +297,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = 0325trymap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.cgua.-325trymap";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -290,17 +326,18 @@
 				57D3ECAC1CA528B50089B52E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		57D3EC9F1CA528B50089B52E /* _325trymap.xcdatamodeld */ = {
+		57D3ECB81CA571940089B52E /* txtlist.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				57D3ECA01CA528B50089B52E /* _325trymap.xcdatamodel */,
+				57D3ECB91CA571940089B52E /* txtlist.xcdatamodel */,
 			);
-			currentVersion = 57D3ECA01CA528B50089B52E /* _325trymap.xcdatamodel */;
-			path = _325trymap.xcdatamodeld;
+			currentVersion = 57D3ECB91CA571940089B52E /* txtlist.xcdatamodel */;
+			path = txtlist.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
