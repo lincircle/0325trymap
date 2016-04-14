@@ -38,7 +38,7 @@ class Messages: NSObject, NSFetchedResultsControllerDelegate {
         print("lat: \(min_latitude) ~ \(max_latitude)")
         
         print("lng: \(min_longitude) ~ \(max_longitude)")
-        
+        /*
         let subpredicates = [
             NSPredicate(format: "%lf < latitude", min_latitude),
             NSPredicate(format: "latitude < %lf ", max_latitude),
@@ -48,8 +48,8 @@ class Messages: NSObject, NSFetchedResultsControllerDelegate {
         
         fetchRequest.predicate = NSCompoundPredicate.init(andPredicateWithSubpredicates: subpredicates)
         
-        
-        if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext{
+        */
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext {
             
             let fetchResultController = NSFetchedResultsController(
                 fetchRequest: fetchRequest,
@@ -143,11 +143,91 @@ class Messages: NSObject, NSFetchedResultsControllerDelegate {
         
             print(NSString(data: data!, encoding: NSUTF8StringEncoding))
             
+            parseJsonData(data!)
+            
         }
         
         NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: requestedHandler).resume()
         
 
+    }
+    
+    class func parseJsonData(data: NSData) {
+        
+        let jsonResult: NSDictionary!
+        
+        do {
+        
+             jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+            
+            print(jsonResult)
+            
+            let jsonMessages = jsonResult["response"] as! NSDictionary
+            print(jsonMessages)
+            let jsonModel = jsonMessages["model"] as! NSDictionary
+            print(jsonModel)
+            let json = MessageJson()
+            json.message = jsonModel["message"] as! String
+            print(json.message)
+            json.latitude = Double(jsonModel["latitude"] as! String)!
+            print(json.latitude)
+            json.longitude = Double(jsonModel["longitude"] as! String)!
+            print(json.longitude)
+            
+            let date1 = jsonModel["created_at"] as! String
+            print(date1)
+            
+            let dateFormatter = NSDateFormatter()
+            
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+            json.date = dateFormatter.dateFromString(date1)
+            
+            print(json.date)
+            
+            var message: Message!
+            
+            if let NSManagedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext{
+                
+                message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: NSManagedObjectContext) as! Message
+                
+                message.message = json.message
+                message.latitude = json.latitude
+                message.longitude = json.longitude
+                message.date = json.date!
+                
+                print("印出message物件\(message)")
+                
+                /*if let a = angle {
+                    
+                    message.angle = a
+                    
+                }*/
+                
+                do {
+                    
+                    try NSManagedObjectContext.save()
+                    print("存入core data")
+                
+                }
+                catch {
+                    
+                    print(error)
+                
+                    return
+                
+                }
+            }
+        
+        }
+        catch _ {
+            
+            print("error")
+            
+        }
+        
+        print("Json資料解析進入core data")
+        
     }
     
     class func dictToJsonNSData(dict:[NSObject:AnyObject]) -> NSData? {
