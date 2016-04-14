@@ -28,6 +28,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBOutlet weak var angle_label: UILabel!
     
+    @IBOutlet weak var label_latitude: UILabel!
+    
+    @IBOutlet weak var label_longitude: UILabel!
+    
+    
     
     private var angle: Double?
     
@@ -65,6 +70,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         map_view.centerCoordinate = userLocation.coordinate
         
         _zoom(userLocation.coordinate, animated: true)
+        
+        self.label_latitude.text = "誤差：± \(userLocation.location!.horizontalAccuracy) 公尺"
         
     }
     
