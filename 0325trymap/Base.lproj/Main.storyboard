@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zEm-UW-aQy">
-                                <rect key="frame" x="0.0" y="173" width="320" height="286"/>
+                                <rect key="frame" x="0.0" y="233" width="320" height="286"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZZ-Yw-ZUy">
                                 <rect key="frame" x="254" y="84" width="47" height="30"/>
@@ -127,12 +127,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LR-f8-gGb">
+                                <rect key="frame" x="20" y="173" width="281" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="angle_label" destination="3gS-aj-0Xw" id="FFm-Pl-bYH"/>
+                        <outlet property="label_latitude" destination="1LR-f8-gGb" id="nM7-td-WZS"/>
                         <outlet property="map_view" destination="zEm-UW-aQy" id="zCo-wk-2e8"/>
                         <outlet property="submit" destination="cZZ-Yw-ZUy" id="2II-3H-e9k"/>
                         <outlet property="sw_btn" destination="ccZ-4y-fMN" id="WQn-Et-NEE"/>

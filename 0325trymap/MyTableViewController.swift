@@ -75,13 +75,13 @@ class MyTableViewController: UITableViewController, NSFetchedResultsControllerDe
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        _location_manager.stopUpdatingLocation()
+        //_location_manager.stopUpdatingLocation()
         
         print(locations[0].coordinate)
         
         current_location = locations[0]
         
-        _messages = Messages(coordinate: current_location.coordinate, range: 0.025)
+        _messages = Messages(coordinate: current_location.coordinate, range: 0.1)
         
         self.tableView.reloadData()
         

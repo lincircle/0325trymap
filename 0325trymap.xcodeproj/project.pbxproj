@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5701A11F1CAD622900E0EDAD /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5701A11E1CAD622900E0EDAD /* MessageViewController.swift */; };
+		5714AB7E1CBFBD0300E430F3 /* MessageJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5714AB7D1CBFBD0300E430F3 /* MessageJson.swift */; };
 		571846851CB55EB0004F3479 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571846841CB55EB0004F3479 /* Messages.swift */; };
 		57D3EC991CA528B50089B52E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D3EC981CA528B50089B52E /* AppDelegate.swift */; };
 		57D3EC9E1CA528B50089B52E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D3EC9C1CA528B50089B52E /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		5701A11E1CAD622900E0EDAD /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		5714AB7D1CBFBD0300E430F3 /* MessageJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageJson.swift; sourceTree = "<group>"; };
 		571846841CB55EB0004F3479 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		57D3EC951CA528B50089B52E /* 0325trymap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 0325trymap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D3EC981CA528B50089B52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				57D3ECB81CA571940089B52E /* txtlist.xcdatamodeld */,
 				57D3ECBB1CA575F20089B52E /* Message.swift */,
 				5701A11E1CAD622900E0EDAD /* MessageViewController.swift */,
+				5714AB7D1CBFBD0300E430F3 /* MessageJson.swift */,
 			);
 			path = 0325trymap;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				57D3ECB21CA55C3F0089B52E /* MapViewController.swift in Sources */,
 				57D3EC991CA528B50089B52E /* AppDelegate.swift in Sources */,
 				57D3ECBC1CA575F20089B52E /* Message.swift in Sources */,
+				5714AB7E1CBFBD0300E430F3 /* MessageJson.swift in Sources */,
 				5701A11F1CAD622900E0EDAD /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
