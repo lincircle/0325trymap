@@ -77,6 +77,7 @@ class Messages: NSObject, NSFetchedResultsControllerDelegate {
     
     class func add(text:String, coordinate:CLLocationCoordinate2D, angle:Double? = nil) {
         
+        /*
         //print("txt==" + text.text!)
         
         //print("緯度=" + String(location.coordinate.latitude))
@@ -121,7 +122,46 @@ class Messages: NSObject, NSFetchedResultsControllerDelegate {
                 return
             }
         }
+         */
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: "https://leaf.ms/messages")!)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = Messages.dictToJsonNSData(["message":text, "latitude":coordinate.latitude, "longitude":coordinate.longitude])
+        request.setValue("Bearer SA-Q9T8R_A-C~A-Q6Q7A~B+B~A-D8A-R.S+Q.A-C~A-S2R7R4A-T+/SA-R+S9R8A-C~A-Q2S.S9T_R2AS_Q1R3D9S4S1B.Q_B~Q1R6A+QAT7R0S0S9B+BQR8T1R5D9T1S9Q5B.R5A-D8A-R8R9R~S9Q_R9A-C~A-A.A.A.A.A.A.A.A.D9A.A.A.A.D9A.A.A.A.D9A.A.A.A.D9A.A.A.A.A.A.A.A.A.A.A.A.A-D8A-R.S+Q.R9A-C~A-T9T_Q-S9T8R9A-T+/Bh7A9S_A5j+B+S9D0w+i+R9z-z6z2x.A4C+A_T8D8z9R_h+D4T6R-CS6C6D3R8D5S3x1Q~xC.A9y+A_w9SA0y3D5g_j.z0C2h2S~C1i-R2z8jD1g~R_D_B-Q~A6g0h9C8Qg2i9C4j2y9C_A~i7T0j0g.w~i2T3g4B1R.h5S5Q6R~D4g9Q2B4x~z3y6A3B_i~w_i+g.z.D2Q3R4j3h9i-j0B9D~x5g9z2S.T8j9C.x4w0x0T8T5T4z7Q-y4", forHTTPHeaderField: "Authorization")
+        
+        let app_version = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String
+        
+        let system_version = UIDevice.currentDevice().systemVersion
+        
+        let uuid = UIDevice.currentDevice().identifierForVendor!
+        
+        request.setValue("LeafMS/\(app_version) (iOS \(system_version); \(uuid.UUIDString))", forHTTPHeaderField: "User-Agent")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json; version=1", forHTTPHeaderField: "Accept")
+        
+        let requestedHandler:(NSData?, NSURLResponse?, NSError?) -> Void = { (data, response, error) in
+        
+            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
+            
+        }
+        
+        NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: requestedHandler).resume()
+        
 
+    }
+    
+    class func dictToJsonNSData(dict:[NSObject:AnyObject]) -> NSData? {
+        
+        do {
+            
+            return try NSJSONSerialization.dataWithJSONObject(dict, options: NSJSONWritingOptions())
+            
+        }
+        catch _ {
+            
+            return nil
+            
+        }
     }
     
     class func getNearby(coordinate: CLLocationCoordinate2D, range: Double) {
