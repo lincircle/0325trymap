@@ -189,6 +189,12 @@ class Messages: NSObject, NSFetchedResultsControllerDelegate {
             json.longitude = Double(jsonModel["longitude"] as! String)!
             print(json.longitude)
             
+            if let a = jsonModel["_heading"] as? Double {
+                
+                json.angle = a
+            
+            }
+            
             let date1 = jsonModel["created_at"] as! String
             print(date1)
             
@@ -211,13 +217,13 @@ class Messages: NSObject, NSFetchedResultsControllerDelegate {
                 message.longitude = json.longitude
                 message.date = json.date!
                 
-                print("印出message物件\(message)")
-                
-                /*if let a = angle {
+                if let a = json.angle {
                     
                     message.angle = a
                     
-                }*/
+                }
+                
+                print("印出message物件\(message)")
                 
                 do {
                     
