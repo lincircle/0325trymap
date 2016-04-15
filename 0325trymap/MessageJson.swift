@@ -14,5 +14,6 @@ class MessageJson {
     var latitude: Double = 0
     var longitude: Double = 0
     var date: NSDate? = nil
+    var angle: Double? = nil
     
 }
